@@ -1,0 +1,87 @@
+# Aggressive 0DTE/1DTE options bot configuration.
+#
+# This bot trades short-dated SPY/QQQ options on opening-range momentum.
+# It is INTENTIONALLY aggressive — sized to chase 6-10% days, with kill
+# switches that cap a bad day at -15% and a bad week at -25%.
+#
+# Tune carefully. Every knob below shifts the risk/return profile.
+
+strategy:
+  name: aggressive_options_momentum
+  # Underlyings to scan. SPY = daily 0DTE, QQQ = M/W/F 0DTE, both have 1DTE.
+  underlyings:
+    - SPY
+    - QQQ
+  # Opening range = first N minutes after 9:30 ET. Shorter than the ORB bot
+  # (15 → 10) because options theta makes late entries unprofitable.
+  opening_range_minutes: 10
+  # Only enter breakouts inside this window (ET). Closes early to avoid
+  # the worst of theta decay on 0DTE.
+  entry_window_start: "09:40"
+  entry_window_end: "13:30"
+  # Flat all positions by this time. 0DTE goes to zero at close — must exit.
+  force_flat_time: "15:45"
+  # Min opening-range size as % of underlying price. Filters dead tape.
+  min_range_pct: 0.15
+  # Max opening-range size — already-exploded ranges = bad R:R.
+  max_range_pct: 1.5
+  # Breakout volume must be >= N× the average for the OR window.
+  volume_confirm_multiplier: 1.5
+  # Index-correlation filter: only take a SPY long if QQQ is also above
+  # its OR midpoint (and vice versa). Avoids fading the broader index.
+  require_index_confirmation: true
+  # Contract selection. 0 = ATM, 1 = 1 strike OTM, etc. Slight OTM gives
+  # the most leverage per dollar but lowest delta.
+  strikes_otm: 1
+  # 0 = use today's expiry (0DTE), 1 = next trading day (1DTE).
+  # 0DTE = max gamma + max theta. 1DTE = a little more cushion.
+  # Mondays auto-fall back to 1DTE because QQQ has no 0DTE.
+  preferred_dte: 0
+  # Reject contracts wider than this bid-ask spread (% of mid). Wide spreads
+  # eat your edge on entry AND exit.
+  max_spread_pct: 5.0
+  # Reject contracts cheaper than this (per share, so x100 for total).
+  # Sub-$0.30 contracts have terrible spreads and round-lot slippage.
+  min_premium: 0.30
+
+risk:
+  # % of account equity spent on premium per trade. With max loss = 100% of
+  # premium, this is also the max single-trade % loss. 7% × 4 trades = 28%
+  # max theoretical exposure per day, but kill switch caps actual at -15%.
+  premium_pct_per_trade: 7.0
+  # Stop-out: exit when premium drops by this % from entry.
+  stop_loss_pct: 40.0
+  # Profit target: exit when premium rises by this %.
+  take_profit_pct: 75.0
+  # Trailing stop activates after premium is up by this %, locks in gains.
+  trail_activate_pct: 50.0
+  # Trail distance from peak premium once activated.
+  trail_distance_pct: 25.0
+  # Hard daily kill switch — stop trading + flatten if equity drops this much.
+  daily_loss_cap_pct: 15.0
+  # Lock-in switch — stop trading + flatten if equity is up this much.
+  daily_profit_target_pct: 20.0
+  # Hard WEEKLY kill switch — stop the bot for the rest of the week.
+  weekly_loss_cap_pct: 25.0
+  # Max trades per day.
+  max_trades_per_day: 4
+  # Max concurrent open contracts.
+  max_concurrent_positions: 2
+
+execution:
+  # How often (seconds) to scan for entries during the entry window.
+  scan_interval_seconds: 30
+  # How often (seconds) to check exits on open positions. Tighter than scan
+  # interval — gamma moves fast on 0DTE.
+  exit_check_interval_seconds: 10
+  # Use limit orders pegged to mid + this many cents. Pure market orders on
+  # options get hammered by spread. Fall back to market after N seconds.
+  limit_offset_cents: 2
+  limit_timeout_seconds: 8
+
+reporting:
+  # Push reports to GitHub at EOD?
+  git_push_on_eod: true
+  git_branch: main
+  # Length of rolling window for the dashboard.
+  dashboard_window_days: 30
