@@ -1,0 +1,5 @@
+timestamp,underlying,direction,contract_symbol,contract_type,strike,expiry,qty,entry_mid,entry_ask,fill_price,total_cost,target_pct,actual_pct,spread_pct,reason,order_id
+2026-05-07T00:10:38.890849,SPY,long,SPY260506C00731000,call,731.0,2026-05-06,92,0.69,0.70,0.71,6440.00,7.00,6.93,1.44,SPY ORB-long px=729.66 OR=727.82-729.55 contract=SPY260506C00731000 mid=0.69 spr=1.4%,6a6c2c16-b2fb-4769-aea6-bb300d9aec6a
+2026-05-07T00:17:37.811783,QQQ,long,QQQ260506C00690000,call,690.0,2026-05-06,52,1.23,1.23,1.20,6396.00,7.00,6.90,0.82,QQQ ORB-long px=689.44 OR=686.48-689.41 contract=QQQ260506C00690000 mid=1.23 spr=0.8%,5bb8d857-4cb9-4b1e-9de8-bbdab85a8c7c
+2026-05-07T00:43:36.769259,SPY,long,SPY260506C00732000,call,732.0,2026-05-06,81,0.86,0.87,0.85,7047.00,7.00,6.95,1.16,SPY ORB-long px=730.54 OR=727.82-729.55 contract=SPY260506C00732000 mid=0.86 spr=1.2%,d7133deb-bccd-4e2c-b4f4-c14cd047e2d7
+2026-05-07T00:56:05.943246,QQQ,long,QQQ260506C00692000,call,692.0,2026-05-06,70,1.04,1.04,1.06,7280.00,7.00,6.96,0.97,QQQ ORB-long px=690.86 OR=686.48-689.41 contract=QQQ260506C00692000 mid=1.04 spr=1.0%,637f2929-12e2-4fe5-8d0a-a74e6412fb2e
