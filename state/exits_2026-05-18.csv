@@ -1,0 +1,5 @@
+timestamp,contract_symbol,exit_price,reason,pnl
+2026-05-19T00:06:59.318770,QQQ260518P00708000,2.11,"trailing_stop (peak=62.2%, dropped 32.3% from peak)",702.00
+2026-05-19T00:11:09.258881,QQQ260518P00706000,1.03,stop_loss (-40.7%),-3300.00
+2026-05-19T00:20:13.735343,QQQ260518P00707000,1.30,"trailing_stop (peak=65.9%, dropped 28.5% from peak)",1340.00
+2026-05-19T01:32:52.812505,QQQ260518P00705000,2.92,"trailing_stop (peak=52.1%, dropped 25.9% from peak)",868.00
