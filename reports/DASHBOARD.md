@@ -1,31 +1,31 @@
 # Aggressive Bot — 30-Day Dashboard
 
-Generated: 2026-06-27T06:05:03  
+Generated: 2026-06-30T06:05:03  
 Window: last 30 days  
-Days recorded: 17
+Days recorded: 15
 
 ## Headline
-- **Cumulative return:** -28.59%
-- **Avg daily return:** -1.72%   median +0.00%
+- **Cumulative return:** -34.61%
+- **Avg daily return:** -2.56%   median +0.00%
 - **Best day:** +9.25%   **Worst day:** -11.30%
-- **Max drawdown:** -41.25%
+- **Max drawdown:** -34.61%
 
 ## Hitting the goal
-- Days ≥ +5%: **3** / 17
-- Days ≤ -5%: **6** / 17
-- Days kill-switch fired: **0** / 17
+- Days ≥ +5%: **2** / 15
+- Days ≤ -5%: **6** / 15
+- Days kill-switch fired: **0** / 15
 
 ## Trade quality
-- Total trades: **60**   wins 23   losses 37
-- Win rate: **38.3%**
-- Avg win: $+2,880.72   Avg loss: $-2,684.35
-- Expectancy/trade: **$-551.07**
-- Profit factor: **0.67**
+- Total trades: **52**   wins 18   losses 34
+- Win rate: **34.6%**
+- Avg win: $+2,547.89   Avg loss: $-2,478.06
+- Expectancy/trade: **$-738.31**
+- Profit factor: **0.54**
 
 ## Risk-adjusted
-- Sharpe (annualized): **-3.85**
-- Sortino (annualized): **-4.57**
-- Calmar: **-2.41**
+- Sharpe (annualized): **-5.88**
+- Sortino (annualized): **-6.42**
+- Calmar: **-2.89**
 
 ## Daily breakdown
 
@@ -60,3 +60,4 @@ Days recorded: 17
 | 2026-06-24 | 71,759 | 69,346 | -2,414 | -3.36% | 4 | 2 | 2 |  |
 | 2026-06-25 | 69,341 | 70,427 | +1,087 | +1.57% | 4 | 2 | 2 |  |
 | 2026-06-26 | 70,424 | 76,939 | +6,515 | +9.25% | 4 | 3 | 1 |  |
+| 2026-06-29 | 76,932 | 68,594 | -8,339 | -10.84% | 4 | 0 | 4 |  |
