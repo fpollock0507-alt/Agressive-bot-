@@ -1,0 +1,2 @@
+timestamp,underlying,direction,contract_symbol,contract_type,strike,expiry,qty,entry_mid,entry_ask,fill_price,total_cost,target_pct,actual_pct,spread_pct,reason,order_id
+2026-07-22T23:59:18.698555,QQQ,long,QQQ260722C00707000,call,707.0,2026-07-22,15,2.73,2.74,2.76,4110.00,7.00,6.85,0.73,QQQ ORB-long px=705.74 OR=703.56-705.39 contract=QQQ260722C00707000 mid=2.73 spr=0.7%,877b3078-6fef-4407-bf39-7d4d4532e7d5
