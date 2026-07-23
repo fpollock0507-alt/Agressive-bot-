@@ -1,11 +1,1 @@
-{
-  "QQQ260722C00707000": {
-    "qty": 15,
-    "entry_price": 2.76,
-    "peak_price": 3.0549999999999997,
-    "trail_active": false,
-    "underlying": "QQQ",
-    "direction": "long",
-    "opened_at": "2026-07-22"
-  }
-}
+{}
