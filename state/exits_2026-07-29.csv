@@ -1,0 +1,4 @@
+timestamp,contract_symbol,exit_price,reason,pnl
+2026-07-30T00:26:06.064026,QQQ260729P00672000,7.07,take_profit (83.2%),3840.00
+2026-07-30T00:33:28.444768,QQQ260729P00671000,5.03,"trailing_stop (peak=72.0%, dropped 26.5% from peak)",1111.00
+2026-07-30T03:13:09.642012,QQQ260729P00670000,3.68,stop_loss (-40.7%),-2032.00

@@ -1,0 +1,4 @@
+timestamp,underlying,direction,contract_symbol,contract_type,strike,expiry,qty,entry_mid,entry_ask,fill_price,total_cost,target_pct,actual_pct,spread_pct,reason,order_id
+2026-07-30T00:06:09.298869,QQQ,short,QQQ260729P00672000,put,672.0,2026-07-29,12,3.83,3.85,3.87,4620.00,7.00,6.76,0.78,QQQ ORB-short px=672.73 OR=673.62-677.46 contract=QQQ260729P00672000 mid=3.83 spr=0.8%,20e6f3ef-5e7c-49f6-b7f4-f6c61b5b638e
+2026-07-30T00:07:24.860228,QQQ,short,QQQ260729P00671000,put,671.0,2026-07-29,11,4.13,4.15,4.02,4565.00,7.00,6.60,0.73,QQQ ORB-short px=671.82 OR=673.62-677.46 contract=QQQ260729P00671000 mid=4.13 spr=0.7%,70f4f5de-7d3c-4073-8448-571d0012da5f
+2026-07-30T00:26:23.929354,QQQ,short,QQQ260729P00670000,put,670.0,2026-07-29,8,5.97,5.98,6.22,4784.00,7.00,6.38,0.17,QQQ ORB-short px=670.85 OR=673.62-677.46 contract=QQQ260729P00670000 mid=5.97 spr=0.2%,ef1c29bd-05bd-413d-9191-c3e8e39829ce
